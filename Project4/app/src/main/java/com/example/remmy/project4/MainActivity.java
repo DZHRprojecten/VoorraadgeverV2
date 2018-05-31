@@ -1,9 +1,12 @@
 package com.example.remmy.project4;
 
 import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,6 +45,39 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        Button but3 = findViewById(R.id.button3);
+        but3.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity(new Intent(getApplicationContext(),Boodschappenlijst.class));
+                //if you want to finish the first activity then just call
+            }
+        });
+
+        Button but4 = findViewById(R.id.button4);
+        but4.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity(new Intent(getApplicationContext(),Voorraadlijst.class));
+                //if you want to finish the first activity then just call
+            }
+        });
+
+        Button but8 = findViewById(R.id.button8);
+        but8.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity(new Intent(getApplicationContext(),Help.class));
+                //if you want to finish the first activity then just call
+            }
+        });
+
     }
 
     @Override
@@ -60,16 +97,8 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    /*Button button3=(Button) findViewById(R.id.button3);
-    button3.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view)
-        {
-            startActivity(new Intent(getApplicationContext(),Secondclass.class));
-           /* if you want to finish the first activity then just call
-            finish();
-        }
-    };*/
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

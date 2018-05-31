@@ -20,12 +20,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="navBoodschappenlijst"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
+            android:name=".Voorraadlijst"
+            android:label="@string/title_activity_voorraadlijst"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Boodschappenlijst"
+            android:label="@string/title_activity_boodschappenlijst"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Help"></activity>
     </application>
 
 </manifest>
