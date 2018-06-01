@@ -1,6 +1,5 @@
 package com.example.remmy.project4;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -17,7 +16,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.content.DialogInterface;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,32 +31,8 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Maak uw keuze!")
-                        .setMessage("Aan welke lijst wilt u iets toevoegen?")
-                        .setPositiveButton("Boodschappenlijst", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                                dialog.cancel(); //Zet hier de actie die je wilt uitvoeren als je op "Boodschappenlijst" drukt.
-                            }
-                        })
-                        .setNegativeButton("Voorraadlijst", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                                dialog.cancel(); //Zet hier de actie die je wilt uitvoeren als je op "Voorraadlijst" drukt.
-                            }
-                        })
-                        .setNeutralButton("Annuleren", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                            dialog.cancel();
-                        }
-                        }).show();
-
-
-
-
-
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
@@ -157,6 +131,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
 
         }
 
