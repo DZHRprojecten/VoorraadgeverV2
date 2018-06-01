@@ -78,6 +78,10 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
+
+        //List<Product> Pdtlist= new ArrayList<Product>();
+        //Pdtlist.add(new Product());
     }
 
     @Override
